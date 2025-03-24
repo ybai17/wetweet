@@ -9,6 +9,56 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @unique
+  username String @db.VarChar(255) @unique
+  email String @db.VarChar(255) @unique
+  //password
+  createdAt DateTime @default(now())
+
+  //relationships
+  posts Post[] //all the posts this user has made
+  comments Comment[] //all the comments this user has written
+  likes Like[] //all of this user's Likes
+}
+
+model Post {
+  id Int @id @unique
+  content String
+  createdAt DateTime @default(now())
+  
+  //relationships
+  author User @relation(fields: [authorId], references: [id])
+  authorId Int
+
+  comments Comment[] //all the comments under this post
+  likes Like[] //all the Likes for this post
+}
+
+model Comment {
+  id Int @id @unique
+  content String
+  createdAt DateTime @default(now())
+
+  //relationships
+  user User @relation(fields: [userId], references: [id]) 
+  userId Int //the ID of the user that wrote this comment
+
+  post Post @relation(fields: [postId], references: [id])
+  postId Int //the ID of the post this comment is under
+}
+
+model Like {
+  id Int @id @unique
+
+  //relationships
+  user User @relation(fields:[userId], references: [id])
+  userId Int //the ID of the user who made this Like
+
+  post Post @relation(fields:[postId], references: [id])
+  postId Int //the ID of the post this is a Like for
 }
