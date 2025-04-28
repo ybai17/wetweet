@@ -1,0 +1,30 @@
+.weather-widget {
+    width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e6ecf0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #14171a;
+    position: sticky;
+    top: 10%;
+}
+
+.weather-widget h2 {
+    text-align: center;
+    color: #1da1f2;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.weather-widget img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.weather-widget p {
+    text-align: center;
+}

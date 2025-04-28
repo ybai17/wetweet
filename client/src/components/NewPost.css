@@ -1,0 +1,94 @@
+.new-post-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e6ecf0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #14171a;
+}
+
+.new-post-container h2 {
+    text-align: center;
+    color: #1da1f2;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.new-post-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd6dd;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.new-post-textarea:focus {
+    border-color: #1da1f2;
+    box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.2);
+}
+
+.new-post-button {
+    background-color: #1da1f2;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.new-post-button:hover {
+    background-color: #1991da;
+}
+
+.new-post-button:disabled {
+    background-color: #a0d0f5;
+    cursor: not-allowed;
+}
+
+.message {
+    color: green;
+    margin-bottom: 0.75rem;
+}
+
+.error {
+    color: red;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .new-post-container {
+        padding: 1.5rem;
+    }
+
+    .new-post-textarea {
+        font-size: 15px;
+    }
+
+    .new-post-button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-post-container {
+        padding: 1rem;
+    }
+
+    .new-post-textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .new-post-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

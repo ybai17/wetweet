@@ -1,0 +1,87 @@
+.leftBar {
+    position: sticky;
+    top: 64px;
+    /* match your AppBar height */
+    height: calc(100vh - 64px);
+    width: 220px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    color: #1da1f2;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    overflow-y: auto;
+    padding: 8px 0;
+}
+
+/* hide scrollbar */
+.leftBar::-webkit-scrollbar {
+    display: none;
+}
+
+.leftBar .container {
+    padding: 0 12px;
+}
+
+.leftBar hr {
+    margin: 16px 0;
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.leftBar .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.leftBar .section-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #657786;
+    margin-bottom: 4px;
+}
+
+.leftBar .user {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.leftBar .user:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+.leftBar .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1da1f2;
+    transition: background-color 0.2s ease;
+}
+
+.leftBar .item img {
+    width: 24px;
+    height: 24px;
+}
+
+.leftBar .item span {
+    font-size: 14px;
+}
+
+.leftBar .item:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+/* hide sidebar on small screens */
+@media (max-width: 768px) {
+    .leftBar {
+        display: none;
+    }
+}

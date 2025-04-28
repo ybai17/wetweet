@@ -1,0 +1,73 @@
+.items-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.post-list-wrapper-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-element {
+    width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e6ecf0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #14171a;
+}
+
+.post-user-icon {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.comment {
+    width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e6ecf0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #14171a;
+}
+
+.comment-like-button {
+    background-color: #1975d2; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.comment-like-button:hover {
+    background-color: #64a5e5;
+}
+
+.comment-like-button:active {
+    background-color: #024589;
+}
